@@ -1,9 +1,10 @@
 ﻿using System;
 using DevTest5.Droid;
 
+[assembly: Xamarin.Forms.Dependency(typeof(DeviceInfo))]
 namespace DevTest5.Droid
 {
-    public class DeviceInfo
+    public class DeviceInfo : IDeviceInfo
     {
 
         public string GetDeviceId()

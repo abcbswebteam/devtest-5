@@ -9,11 +9,12 @@ namespace DevTest5
 {
     public partial class MainPage : ContentPage
     {
+        IDeviceInfo _deviceInfo;
         public MainPage()
         {
             InitializeComponent();
-            IDeviceInfo deviceInfo = null;
-            deviceId.Text = deviceInfo.GetDeviceId();
+            _deviceInfo = DependencyService.Get<IDeviceInfo>();
+            deviceId.Text = _deviceInfo.GetDeviceId();
         }
     }
 }
