@@ -12,8 +12,7 @@ namespace DevTest5
         public MainPage()
         {
             InitializeComponent();
-            IDeviceInfo deviceInfo = null;
-            deviceId.Text = deviceInfo.GetDeviceId();
+            deviceId.Text = DependencyService.Get<IDeviceInfo>().GetDeviceId();
         }
     }
 }
